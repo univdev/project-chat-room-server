@@ -10,14 +10,14 @@ router.post('/login', async (req, res) => {
     const { username, password } = req.body;
     const user = await Users.findOne({ username, password: sha256(password) });
     if (!user) res.status(400).json({ message: '계정을 찾을 수 없습니다.' });
-    const token = await jwt.sign(user);
-    res.status(200).json(token);
+    const token = await jwt.sign({ user });
+    res.status(200).json({ token });
   } catch (e) {
     res.status(400).json({ message: e.message });
   }
 });
 
-router.post('/me', auth.user, (req, res) => {
+router.get('/me', auth.user, (req, res) => {
   res.status(200).json(req.user);
 });
 
