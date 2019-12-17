@@ -19,7 +19,8 @@ const Users = mongoose.model('Users', userSchema);
 const commentSchema = new mongoose.Schema({
   comment: { type: String, required: true },
   author: { type: ObjectId, required: true, ref: 'Users' },
+  listener: { type: ObjectId, required: true, ref: 'Users' },
 }, { timestamps: true });
-const Comment = mongoose.model('Comment', commentSchema);
+const Comments = mongoose.model('Comments', commentSchema);
 
-module.exports = { Users, Comment };
+module.exports = { Users, Comments };
