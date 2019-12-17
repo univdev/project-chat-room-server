@@ -1,0 +1,28 @@
+{
+  "name": "project-chat-room-server",
+  "version": "1.0.0",
+  "description": "2019년 2학년 2학기 TCP/IP 프로젝트 서버",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git+https://github.com/univdev/project-chat-room-server.git",
+  "author": "박찬영 <rhdwkrxla68@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/univdev/project-chat-room-server/issues"
+  },
+  "homepage": "https://github.com/univdev/project-chat-room-server#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "gulp": "^4.0.2",
+    "gulp-nodemon": "^2.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "mongoose": "^5.8.1",
+    "sha256": "^0.2.0"
+  }
+}
